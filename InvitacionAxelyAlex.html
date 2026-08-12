@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda - Alexandra & Axel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container that holds the image and clickable areas */
+        .invitation-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Limits maximum width for desktop readability */
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive image setup */
+        .invitation-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Generic base style for interactive overlay buttons */
+        .overlay-button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .overlay-button:hover {
+            background-color: rgba(212, 175, 55, 0.2); /* Soft golden glow on hover */
+            transform: translateX(-50%) scale(1.02);
+        }
+
+        .overlay-button:active {
+            transform: translateX(-50%) scale(0.98);
+        }
+
+        /* 1. BUTTON: Dirección / Peñaflor (Google Maps / Waze) */
+        .location-button {
+            bottom: 17%;      /* Positions over the address section */
+            width: 12%;       /* Covers the address text and map icon */
+            height: 4%;       /* Adjust height to cover address block */
+        }
+
+        /* 2. BUTTON: "AQUÍ" (RSVP / Confirmation) */
+        .rsvp-button {
+            bottom:  8.5%; /* Vertical position near the bottom */
+            width: 14%;       /* Matches the width of the "AQUÍ" frame */
+            height: 2.5%;     /* Matches the height of the "AQUÍ" frame */
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-container">
+        <!-- The Invitation Image -->
+        <img src="Invitacion1.jpg" alt="Invitación Boda Alexandra y Axel" class="invitation-image">
+
+        <!-- Button 1: Location Link (Peñaflor / Address) -->
+        <!-- Replace 'https://maps.google.com/...' with your actual Google Maps or Waze link -->
+        <a href="https://maps.app.goo.gl/odNmLKhSko6MWPzE7" target="_blank" class="overlay-button location-button" title="Ver Ubicación en Google Maps"></a>
+
+        <!-- Button 2: Confirmation Link ("AQUÍ") -->
+        <!-- Replace 'https://your-rsvp-link.com' with your actual RSVP link -->
+        <a href="https://docs.google.com/forms/d/1o6IBi3F6FmMIwX-Nw4C69duEt8I-SJ3L5UD5BRCim9s/viewform?hl=es&hl=es&edit_requested=true" target="_blank" class="overlay-button rsvp-button" title="Confirmar Asistencia"></a>
+    </div>
+
+
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
+</body>
+</html>
